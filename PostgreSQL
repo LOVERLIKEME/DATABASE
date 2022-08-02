@@ -1,0 +1,19 @@
+create database book_store;
+
+\c book_store;
+
+create table develop_book (
+  book_id INTEGER,
+  date DATE,
+  name VARCHAR(80)
+);
+
+\dt develop_book;
+
+drop table develop_book;
+
+insert into develop_book values( 1, '2019-12-17', '맛있는 MongoDB' );
+insert into develop_book values( 2, '2019-12-25', '''자바''' );
+insert into develop_book (date, book_id, name) values
+( '2020-01-03', 3, 'HTML/CSS' );
+
